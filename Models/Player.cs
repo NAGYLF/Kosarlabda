@@ -1,17 +1,17 @@
-﻿namespace Kosarlabda.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace Kosarlabda.Models;
+
+public partial class Player
 {
-    public partial class Player
-    {
-        public Guid Id { get; set; }
+    public Guid Id { get; set; }
 
-        public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
-        public int? Height { get; set; }
+    public int Height { get; set; }
 
-        public int? Weight { get; set; }
+    public int Weight { get; set; }
 
-        public DateTime? CreatedTime { get; set; }
-
-        public virtual ICollection<Data> Data { get; set; } = new List<Data>();
-    }
+    public DateTime CreatedTime { get; set; }
 }
