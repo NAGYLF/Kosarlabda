@@ -15,7 +15,7 @@ public partial class TeamContext : DbContext
     {
     }
 
-    public virtual DbSet<Datum> Data { get; set; }
+    public virtual DbSet<Data> Data { get; set; }
 
     public virtual DbSet<Player> Players { get; set; }
 
@@ -25,7 +25,7 @@ public partial class TeamContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Datum>(entity =>
+        modelBuilder.Entity<Data>(entity =>
         {
             entity
                 .HasNoKey()

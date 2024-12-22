@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Kosarlabda.Models;
 
-public partial class Datum
+public partial class Data
 {
     public int In { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Datum
 
     public int UpdatedTime { get; set; }
 
-    public string PlayerId { get; set; } = null!;
+    public Guid PlayerId { get; set; }
 
     public int Id { get; set; }
 }
